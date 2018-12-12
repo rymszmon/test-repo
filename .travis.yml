@@ -7,7 +7,13 @@ os:
   - centos
 cache: pip
 install: "pip install -r requirements.txt"
-script: 
-  - make check
-  - make run
-  - make publish
+script: make check
+after_success:
+  deploy:
+    provider: releases
+    api_key: 
+      secure: 5d7ae2dbd43f74ce8dda64a2189e20ee03289fed
+    file: foo.py
+    skip_cleanup: true
+    on:
+      tags: true
