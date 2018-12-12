@@ -10,10 +10,9 @@ install: "pip install -r requirements.txt"
 script: make check
 deploy:
   provider: releases
-  user: "rymszmon"
-  password: "monika_R94"
-  #api_key: 
-  #  secure: 5d7ae2dbd43f74ce8dda64a2189e20ee03289fed
+  #user: "rymszmon"
+  #password: "monika_R94"
+  api_key: 5d7ae2dbd43f74ce8dda64a2189e20ee03289fed
   file: foo.py
   skip_cleanup: true
   on:
