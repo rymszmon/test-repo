@@ -13,13 +13,12 @@ before_deploy:
   - git tag $TRAVIS_TAG
 deploy:  
   provider: releases 
-  #user: "rymszmon"
-  #password: "monika_R94"
   api_key:
     secure: "HoDdC4Nf3cKobAw8+qrroXG61I4DhDvr8Ze1qZ2ikLCkIjGwz/1mdP3UfcBKLoigE64nfIG0z98Pk7H/6ilQ3IjpILntPFglr9jgzG6nzsGL9/wDLsIBE0TwrOlQpO8O9K826wPUWoYJ2rx3J6kWAtYtglZJrCAWugRoz6yU6TZqdM8fSAxG4+h9F6q062BF1+rk6BkEPN7s8H9i/aBPrMPTQKbFEIXKWOi+sEHHVaqFkY/ZDcUBE+h8hiLit30XzZpNR5gpm7I8Yya18zSLFusRdZc1K5xN3uR0iBzOtZlm10TbTUDp0Jrq3/f1D2Yx51Xd/+7mX010Rkx11GZ3HUXDK2X2tG3CBX7WVFe319m9R9jW6RmUM7vaYI/aD9hPIOVqf4BqHvyH9Xi3ysK5MOkVaawLw6vqgHthTyDJMVl8CvVoiNcn6ZlJhtzc/YF0XmuQRBdqVleCQy+f9y5MQTtz7/TWGj6kdrepfI4lm4sSa6aYZOFgIS5hbEGGKKNtFeidfK2x4JS5cEl43EVRCJbWiaDtPhQE+kKu8DDOvfx2gmu467HvCURMuGK+h3N2jyve8+jgf1qPJQWp3Sd77M7PTIWMAC5Rjm+8SWIxe+TqtsYkpz2yS14u+B+BxpJ1hyHKePQWtWyUBW/8mEYqZ7d/KyObaVdsa0toy32iX6c="
   file: foo.py
   skip_cleanup: true
   on:
     repo: rymszmon/test-repo
+    all_branches: true
     tags: true
   
