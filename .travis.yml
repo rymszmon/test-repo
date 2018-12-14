@@ -11,7 +11,8 @@ script: make check
 #before_deploy:
 #  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date + '%Y%m%d%H%M%S')-$(git log --format=%h -1)}
 #  - git tag $TRAVIS_TAG
-deploy:   
+deploy:  
+  provider: releases 
   #user: "rymszmon"
   #password: "monika_R94"
   api_key:
@@ -20,5 +21,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: rymszmon/test-repo
-    all_branches: true
+    tags: true
   
