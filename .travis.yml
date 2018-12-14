@@ -1,26 +1,21 @@
 language: python
 python:
-  - "2.6"  
-  - "2.7"
+- '2.6'
+- '2.7'
 os:
-  - ubuntu
-  - centos
+- ubuntu
+- centos
 cache: pip
-install: "pip install -r requirements.txt"
+install: pip install -r requirements.txt
 script: make check
-#before_deploy:
-#  - export TRAVIS_TAG=${TRAVIS_TAG:-$(date + '%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-#  - git tag $TRAVIS_TAG
-deploy:  
-  provider: releases  
+deploy:
+  provider: releases
   user: rymszmon
-#  api_key: "7487c71d4004885f17d6fe089832af429649a5ce"
   api_key:
-    secure: "SAYTYFwYnqHAmMrRT0+8fhuaM7p2UUZZMDem2N+nVroYj2yWNuC/CaB+K1xeh7T5oUZvuWEbuSySWBkUjS3FTI6l98/3ALl9X35CWxlP6NfiSeEqwMGopIN2ZQ7qX3w3/d2UfYHI+3EDeGBLxC61Yu2dsZLrE7j6Dbq7+u+2yXVJcJf7+oWKtIFdsQl3WY5bUwqtXj4tNN3Kg4m005QdTCtSPH87Wjr8cVvmo6Msl6xzluEZPN/ORDIJ1hFIRX43MGCxANuy1J64yekB38GMvqwNibOh08hX58m/J8nGaSlLQStDG9MpBNyV/MN6uznWWWE0foZ4G/aOMTVpDNuuK3bWZ0l+S5szIh5jSU/OMhW9OABDFAkWa1pwCAEjy5c77NroCoWErxZPqMZpbjjNmkEtv2/9O4fYmDjNRm2NzqI5e2km4QM2Etj+jZN9w+8mnqA4LbKTIqNnagcEHTjXb4N8poEHyWznlju6t/laMnuW4n1+T1/dNxvvUaeoDdENs1ZXAmfGwtEp58ehvfC/XDTv16mO1733mM9aPmjo+GAb4EOiAO8L7Te7Kz1XZutH8asSRNP/LaFWN8I6gc/E19seGkpVEui7G6rrfuYnLn6tJr7XqJQDVAvc5qYG2+2tfIqdYyGsqBxL5jnCsIVgak5jp49xYdUPUIzAsjt7U+k="  
+    secure: "aoU9WRbUBMkq4JiLpGLA2MiyH1sKdiD6e0isK99ubbpeRVb/u1kg24kwriqxzUOXgCRZ09v0CgJ5LvGV2L5X+636Dz2gGm99WK86F7llAbLFxJetY72vm4XVtJV+39p3SbgemmjpNy0aeC5Sm39FFMOfqlPNHUy6N9Urt2zbA7Nj9phOlEoXggC/vNEwxSI9tce/02I4tQKejaQG5lm9iMSmIrnMkXRlHMCknujr8uGvhElLbS05aGOKGL27cMf9PMCpQuKqCdd9FqDVxBHMLVcfrgFgkt8rNQWlBoLAykLyKykTASB5yRshiqqvKmRtSnQ35p+3DEIpUnCg4gvoXL1xUwx9NEC49NYO/S3ImqbOclRui7jYQ6xYHXeyDMdS1B+k6QjFlxxQH1791RnIkQKMd1J08bolwUqUlM1jZHyGTDacrqp4f1PHmXvDz8aZegPT1QC+yg/e/HZSRM9wN+4v6cMb5eKbdfi7BfcmG6R2c3CluKOgLth0DoCzxuXcBY75L0h4WiXVEW1u/lQf3YcrLYvDX+rCOdY37e0+/pj9PRPPrnC5pwecbR624F5HZ+VuuOfUuqfjzpe4EvaMAnh7mLsVkUWayohl7N/eFUftXDj2XwnKzIplQP6Vv8nPciJCHdcaQzGAk7C9MfqoxUuU4x0rxSenIt6LPS2TDX4="
   file: foo.py
   skip_cleanup: true
   on:
     repo: rymszmon/test-repo
     all_branches: true
     tags: false
-  
