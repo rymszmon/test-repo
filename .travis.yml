@@ -13,14 +13,14 @@ script: make check
 #  - git tag $TRAVIS_TAG
 deploy:  
   provider: releases  
-  user: "monika.rymsza@tieto.com"  
-  #api_key: "7487c71d4004885f17d6fe089832af429649a5ce"
+#  user: "monika.rymsza@tieto.com"  
+  api_key: "7487c71d4004885f17d6fe089832af429649a5ce"
   api_key:
     secure: "SAYTYFwYnqHAmMrRT0+8fhuaM7p2UUZZMDem2N+nVroYj2yWNuC/CaB+K1xeh7T5oUZvuWEbuSySWBkUjS3FTI6l98/3ALl9X35CWxlP6NfiSeEqwMGopIN2ZQ7qX3w3/d2UfYHI+3EDeGBLxC61Yu2dsZLrE7j6Dbq7+u+2yXVJcJf7+oWKtIFdsQl3WY5bUwqtXj4tNN3Kg4m005QdTCtSPH87Wjr8cVvmo6Msl6xzluEZPN/ORDIJ1hFIRX43MGCxANuy1J64yekB38GMvqwNibOh08hX58m/J8nGaSlLQStDG9MpBNyV/MN6uznWWWE0foZ4G/aOMTVpDNuuK3bWZ0l+S5szIh5jSU/OMhW9OABDFAkWa1pwCAEjy5c77NroCoWErxZPqMZpbjjNmkEtv2/9O4fYmDjNRm2NzqI5e2km4QM2Etj+jZN9w+8mnqA4LbKTIqNnagcEHTjXb4N8poEHyWznlju6t/laMnuW4n1+T1/dNxvvUaeoDdENs1ZXAmfGwtEp58ehvfC/XDTv16mO1733mM9aPmjo+GAb4EOiAO8L7Te7Kz1XZutH8asSRNP/LaFWN8I6gc/E19seGkpVEui7G6rrfuYnLn6tJr7XqJQDVAvc5qYG2+2tfIqdYyGsqBxL5jnCsIVgak5jp49xYdUPUIzAsjt7U+k="  
   file: foo.py
   skip_cleanup: true
   on:
     repo: rymszmon/test-repo
-    branch: master
-    tags: false
+    all_branches: true
+    tags: true
   
